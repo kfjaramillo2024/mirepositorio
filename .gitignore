@@ -3,3 +3,5 @@ nuevoarchivo2.txt
 nuevoarchivo.txt
 # archivo ignore
 archivoignore.txt
+*.log
+my-proyect/archivo2.txt
