@@ -1,4 +1,4 @@
-name: Flujo de trabajo # nombre del flujo de trabajo
+name: Flujo_trabajo # nombre del flujo de trabajo
 # evento que activa el flujo de trabajo 
 on:
   push:
