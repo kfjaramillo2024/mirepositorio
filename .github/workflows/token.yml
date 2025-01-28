@@ -21,9 +21,10 @@ jobs:
       # Uso del GITHUB_TOKEN
       - name: Use GITHUB_TOKEN
         # Ejecuta el comando curl para realizar una llamada a la API de GitHub.
-        run: curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}"
-                  # GITHUB_TOKEN se genera automáticamente para cada ejecución del flujo y tiene permisos predeterminados para interactuar con el repositorio.
+        run: |
+          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+        # GITHUB_TOKEN se genera automáticamente para cada ejecución del flujo y tiene permisos predeterminados para interactuar con el repositorio.
                  -H "Accept: application/vnd.github.v3+json" \
-                  # versión 3 de la API de GitHub.
+        # versión 3 de la API de GitHub.
                  https://api.github.com/repos/${{ github.repository }}
-                  # Es una variable de contexto de GitHub que contiene el nombre del repositorio en formato owner/repo
+        # Es una variable de contexto de GitHub que contiene el nombre del repositorio en formato owner/repo
